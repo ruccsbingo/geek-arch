@@ -28,26 +28,30 @@ stat .> trade : use
 
 
 @startuml
+
 left to right direction
 skinparam componentStyle uml2
 
 interface trade 
 interface query_stat
+interface register 
+interface query_account
 
-    interface register 
-    interface query_account
-
-    register - [manager_console]
-    query_account - [manager_console]
+register - [manager_console]
+query_account - [manager_console]
 
 trade - [trade_module]
 [trade_module] -> query_account
 
 query_stat - [stat_module]
 [stat_module] -> query_account
+
 @enduml
 
+![](http://www.plantuml.com/plantuml/png/ROyzRiKW3CTtdy8NU4iFKBqxTAogo08dHGKxDMR8xHlIWUGfBF3_-0aRdjN9l9KCcMT7LxIqV3l6P1mygK3zIRAIKS6WPLLXyG_VCkCElG4aSRQP0gCRHSQJyTlOjgawEG3kPoJ6IwhEXiC_4HI2Dlc7HlM1duM45hOfg5JD_DKBL-Qs1STaFJeUKz7Okd-L-7X__NyiqE5-3tQeE_J94bl9Vm00)
+
 @startuml
+
 database "mysql" as d1
 
 node "收款机" {
