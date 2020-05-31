@@ -23,6 +23,7 @@ stat .> trade : use
 
 @enduml
 
+![](http://www.plantuml.com/plantuml/png/XO_FIiGm4CRlynHpr4DzW2AoRoB3Tgo5D8LaWWSHl2YB82WYx46GWdWi7XP5nRUnVnx3fabXOG_c4lZDz_qoMLWX8wvK08fF1AL2K-IdWbbXU2b5fG7IxdqrR3w7owiKoUAoqjQLR4R-TDlUrEtzUk9dL8YdVLFtTzSpBKbJFcBmEjAvOZHiXPmXBNWEE9wzOVFQhJv2SN-hTUpVgXI7rE_NIxT-cEPYA8iqBjUyjJ-F_VVpqDHJmWe9N03CssAI7ErejuV1YH2kmoJ1-KUnvKD16pC7Eq9CqLa67_f_6YI1mO9rvahr1m00)
 
 
 
