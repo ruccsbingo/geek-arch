@@ -97,6 +97,8 @@ send .> dial : use
 
 @enduml
 
+![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAoUZvbnREExLOAYSKAfSMfHOPSN4MfoIM9UUavgGh9-NabHVav2jLS2a2WyQodyzdK3K_NJWSoNavQfmdIavAPdbcIc0DLC6FVyoMxdlPlVxwW4IfRN92JM0cLxLppTF66fpDNFEsV-7B-Ph22ueBKnEpK8hZv8Ac6HYJpYrFpKXIWqdrBNpRCUZPzmVDT-v_ldVXyznoG2f0Zyu0kXghfNW6q7cetq5crN5nWNodesi6T2gKLzEnWxbEm0laTIGBcBeW4t0YmQxX0150Dp6A86fWes5ge41UN0r0G6Cm0)
+
 https://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/bell.html
 
 https://blog.anoff.io/2018-07-31-diagrams-with-plantuml/
