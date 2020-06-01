@@ -1,3 +1,5 @@
+**用例图**
+
 @startuml
 
 left to right direction
@@ -26,6 +28,7 @@ stat .> trade : use
 ![](http://www.plantuml.com/plantuml/png/XO_FIiGm4CRlynHpr4DzW2AoRoB3Tgo5D8LaWWSHl2YB82WYx46GWdWi7XP5nRUnVnx3fabXOG_c4lZDz_qoMLWX8wvK08fF1AL2K-IdWbbXU2b5fG7IxdqrR3w7owiKoUAoqjQLR4R-TDlUrEtzUk9dL8YdVLFtTzSpBKbJFcBmEjAvOZHiXPmXBNWEE9wzOVFQhJv2SN-hTUpVgXI7rE_NIxT-cEPYA8iqBjUyjJ-F_VVpqDHJmWe9N03CssAI7ErejuV1YH2kmoJ1-KUnvKD16pC7Eq9CqLa67_f_6YI1mO9rvahr1m00)
 
 
+**组件图**
 
 @startuml
 
@@ -50,6 +53,9 @@ query_stat - [stat_module]
 
 ![](http://www.plantuml.com/plantuml/png/ROyzRiKW3CTtdy8NU4iFKBqxTAogo08dHGKxDMR8xHlIWUGfBF3_-0aRdjN9l9KCcMT7LxIqV3l6P1mygK3zIRAIKS6WPLLXyG_VCkCElG4aSRQP0gCRHSQJyTlOjgawEG3kPoJ6IwhEXiC_4HI2Dlc7HlM1duM45hOfg5JD_DKBL-Qs1STaFJeUKz7Okd-L-7X__NyiqE5-3tQeE_J94bl9Vm00)
 
+
+**部署图**
+
 @startuml
 
 database "mysql" as d1
@@ -73,7 +79,7 @@ n1 -> d1
 
 ![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKf9B4bCIYnELL3AhImkp55II2nMI37auihBJm6AFPkoxTcQVS_cx59IgEPI089eY4WiLorCoVDr2vzFQ7iweUzf_mQmxZn3cDhSnBp4zDIY-EJylEBydDHOY6X9KM9AQdnkVaefN0ZecXAe2DXac2qAkdRe6XIi53n2GWAuyWo1ac2NSZcavgK0lG80)
 
-
+**用例图**
 @startuml
 
 :用户: as user1
