@@ -67,10 +67,35 @@ node "管理后台" as n1 {
 [收款] ->  [trade_module] : HTTP
 n1 -> d1
 
-
 @enduml
 
+
+
 ![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKf9B4bCIYnELL3AhImkp55II2nMI37auihBJm6AFPkoxTcQVS_cx59IgEPI089eY4WiLorCoVDr2vzFQ7iweUzf_mQmxZn3cDhSnBp4zDIY-EJylEBydDHOY6X9KM9AQdnkVaefN0ZecXAe2DXac2qAkdRe6XIi53n2GWAuyWo1ac2NSZcavgK0lG80)
+
+
+@startuml
+
+:用户: as user1
+
+rectangle control {
+    (按数字按钮) as digital
+    (显示号码) as display
+    (扬声器发音) as speaker
+    (按发送按钮) as send 
+    (接通无线网络) as connect
+    (拨号) as dial
+}
+
+user1 -> digital
+digital .> display : use
+digital .> speaker : use
+user1 -> send
+send .> connect : use
+send .> dial : use
+
+
+@enduml
 
 https://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/bell.html
 
