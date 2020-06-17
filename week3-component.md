@@ -1,15 +1,6 @@
 ## 单例模式
-```go
-type singleton struct {
 
-}
-
-var s = &singleton{}
-
-func GetSingleton() *singleton {
-	return s
-}
-```
+![](https://github.com/ruccsbingo/geek-arch/blob/master/WX20200617-132941%402x.png)
 
 
 
