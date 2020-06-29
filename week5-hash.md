@@ -8,8 +8,6 @@ import (
 	"sort"
 )
 
-const mod = 8192 * 8
-const INT_MAX = int(^uint32(0) >> 1)
 const UINT32_MAX uint32 = ^uint32(0)
 
 type Hash struct {
@@ -38,6 +36,20 @@ func Init(nodeIps []string) *Hash {
 	}
 	sort.Sort(h.SortNodes)
 	return &h
+}
+
+func (h Hash) Get(key string) interface{} {
+	i := h.NextInt(toInt(key))
+	n := h.Nodes[i]
+	return n.Values[key]
+}
+
+func (h *Hash) Set(key string, value interface{}) {
+	// fmt.Println(toInt(key))
+	i := h.NextInt(toInt(key))
+	// fmt.Println("Next: ", i)
+	n := h.Nodes[i]
+	n.Values[key] = value
 }
 
 type SortedNodes []uint32
@@ -80,20 +92,6 @@ func toInt(key string) uint32 {
 
 	crc32InUint32 := crc32.ChecksumIEEE([]byte(key))
 	return crc32InUint32
-}
-
-func (h Hash) Get(key string) interface{} {
-	i := h.NextInt(toInt(key))
-	n := h.Nodes[i]
-	return n.Values[key]
-}
-
-func (h *Hash) Set(key string, value interface{}) {
-	// fmt.Println(toInt(key))
-	i := h.NextInt(toInt(key))
-	// fmt.Println("Next: ", i)
-	n := h.Nodes[i]
-	n.Values[key] = value
 }
 
 func caculate(nums []int, avg int) float64 {
