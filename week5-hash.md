@@ -45,9 +45,7 @@ func (h Hash) Get(key string) interface{} {
 }
 
 func (h *Hash) Set(key string, value interface{}) {
-	// fmt.Println(toInt(key))
 	i := h.NextInt(toInt(key))
-	// fmt.Println("Next: ", i)
 	n := h.Nodes[i]
 	n.Values[key] = value
 }
@@ -85,11 +83,6 @@ type node struct {
 }
 
 func toInt(key string) uint32 {
-	// adler := adler32.New()
-	// adler.Write([]byte(key))
-	// res := adler.Sum32()
-	// return int(res) % mod
-
 	crc32InUint32 := crc32.ChecksumIEEE([]byte(key))
 	return crc32InUint32
 }
@@ -127,6 +120,7 @@ func TestDistribute(t *testing.T) {
 ```
 
 ## 方差
+```
 127.0.0.10  26701
 127.0.0.1  21248
 127.0.0.2  30283
@@ -138,4 +132,5 @@ func TestDistribute(t *testing.T) {
 127.0.0.9  308175
 127.0.0.6  61901
 **12654056239**
+```
 
