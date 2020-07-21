@@ -8,6 +8,67 @@
 4. 先遍历较长的链表lag步
 5. 同时表里两个链表longer-lag步，判断是否重复
 
+```go
+package list
+
+import (
+	"fmt"
+	"math"
+)
+
+type node struct {
+	value int
+	next  *node
+}
+
+func ShareNode(l1 *node, l2 *node) {
+	l1Len := 0
+	l2Len := 0
+	l1Tmp := l1
+	l2Tmp := l2
+	for {
+		if l1Tmp == nil {
+			break
+		}
+		l1Len++
+		l1Tmp = l1Tmp.next
+	}
+
+	for {
+		if l2Tmp == nil {
+			break
+		}
+		l2Len++
+		l2Tmp = l2Tmp.next
+	}
+
+	l := l1
+	longer := l2
+	shorterLen := l1Len
+	if l1Len > l2Len {
+		longer = l1
+		l = l2
+		shorterLen = l2Len
+	}
+
+	lag = math.Abs(l1Len - l2Len)
+
+	for i := 0; i < lag; i++ {
+		longer = longer.next
+	}
+
+	for i := 0; i < shorterLen; i++ {
+		if l == longer {
+			fmt.Println(l)
+			break
+		}
+		l = l.next
+		longer = longer.next
+	}
+}
+
+```
+
 
 2. 请画出DataNode服务器节点宕机的时候，HDFS的处理过程时序图。
 
