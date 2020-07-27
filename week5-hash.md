@@ -40,6 +40,18 @@ func Init(nodeIps []string) *Hash {
 	return &h
 }
 
+func (h Hash) Get(key string) interface{} {
+	i := h.NextInt(toInt(key))
+	n := h.Nodes[i]
+	return n.Values[key]
+}
+
+func (h *Hash) Set(key string, value interface{}) {
+	i := h.NextInt(toInt(key))
+	n := h.Nodes[i]
+	n.Values[key] = value
+}
+
 type SortedNodes []uint32
 
 func (s SortedNodes) Len() int {
@@ -73,15 +85,19 @@ type node struct {
 }
 
 func toInt(key string) uint32 {
+<<<<<<< HEAD
 	// adler := adler32.New()
 	// adler.Write([]byte(key))
 	// res := adler.Sum32()
 	// return int(res) % mod
 
+=======
+>>>>>>> 45d3c9a06ca12629adcba828889923537aef4976
 	crc32InUint32 := crc32.ChecksumIEEE([]byte(key))
 	return crc32InUint32
 }
 
+<<<<<<< HEAD
 func (h Hash) Get(key string) interface{} {
 	i := h.NextInt(toInt(key))
 	n := h.Nodes[i]
@@ -96,6 +112,8 @@ func (h *Hash) Set(key string, value interface{}) {
 	n.Values[key] = value
 }
 
+=======
+>>>>>>> 45d3c9a06ca12629adcba828889923537aef4976
 func caculate(nums []int, avg int) float64 {
 	sum := 0.0
 	for _, i := range nums {
@@ -129,4 +147,21 @@ func TestDistribute(t *testing.T) {
 ```
 
 ## 方差
+<<<<<<< HEAD
 **3455133300**
+=======
+```
+127.0.0.10  26701
+127.0.0.1  21248
+127.0.0.2  30283
+127.0.0.3  61167
+127.0.0.5  53569
+127.0.0.8  36635
+127.0.0.4  337226
+127.0.0.7  63095
+127.0.0.9  308175
+127.0.0.6  61901
+```
+**12654056239**
+
+>>>>>>> 45d3c9a06ca12629adcba828889923537aef4976

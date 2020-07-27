@@ -59,4 +59,4 @@ func NewLeaf(n string) IComponent {
 }
 ```
 
-
+![](https://github.com/ruccsbingo/geek-arch/blob/master/WX20200617-144154.png)
