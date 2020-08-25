@@ -7,3 +7,5 @@ ON (pv.userid = u.userid);
 
 ![](https://wx2.sinaimg.cn/mw690/6a8f9c5bly1gi35ji9hasj214c087ab2.jpg)
 
+mapreduce的过程，map阶段，从文件中读取数据，按照userid作为key进行划分，数据分片经过shuffle过程，作为reduce的输入，reduce阶段将数据进行拼接，输出到表的文件中。
+
