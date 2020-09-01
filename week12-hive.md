@@ -9,3 +9,19 @@ ON (pv.userid = u.userid);
 
 mapreduce的过程，map阶段，从文件中读取数据，按照userid作为key进行划分，数据分片经过shuffle过程，作为reduce的输入，reduce阶段将数据进行拼接，输出到表的文件中。
 
+map阶段输入：
+输入1 page_view （pageid, userid, time)
+输入2 user (userid, age, gender)
+
+map阶段输出：
+输出1 (userid, <pageid, userid, time>)
+输出2 (userid, <userid, age, gender>)
+
+reduce阶段输入：
+输入1 (userid, <pageid, userid, time>)
+输入2 (userid, <userid, age, gender>)
+
+
+reduce阶段输出：
+(pageid, age)
+
